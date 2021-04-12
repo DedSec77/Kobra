@@ -3,11 +3,8 @@ This is sms bomber.
 
 # Installation:
 Windows:
- run exe file
-if dont work do this:
   Download Python 3.8 from here
-  Launch installer, click add python to PATH
-  Download Impulse
+  Launch Kobra
   Open cmd and enter in floder Linux (Source)
   Run this command: pip install -r requirements.txt
   python Kobra.py
